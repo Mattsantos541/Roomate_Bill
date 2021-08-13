@@ -1,0 +1,17 @@
+Title: Room Mate Bill
+
+Desc: an App that gets as input the amount of bill for a particular period and the days that each flatmate stayed
+in for that period and return how much each person owes. this info will be generated on a pdf.
+
+Objects:     Bill:
+               amount:
+               period:
+
+              Flatmate:
+              name:
+              days_in_house:
+              pays(bill)
+
+              PDFReport:
+              filename
+              generate(flatmate1, flatmate2, bill)
