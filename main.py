@@ -47,7 +47,10 @@ class PdfReport:
 
         pdf.cell(w=100, h=40, txt="Period:", border=1)
         pdf.cell(w=150, h=40, txt=bill.period, border=1, ln=1)
-        pdf.output("bill.pdf")
+
+        pdf.output(self.filename)
+
+
         the_bill = Bill(amount=120, period="March 2021")
         john = Flatmate(name="John", days_in_the_house=20)
         marry = Flatmate(name="Joe", days_in_the_house=25)
