@@ -60,3 +60,4 @@ class PdfReport:
 
         pdf_report = PdfReport(self.filename="Report1.pdf")
         pdf_report.generate(flatmate1=john, flatmate2=marry, bill=the_bill)
+test
