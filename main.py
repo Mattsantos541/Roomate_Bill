@@ -30,7 +30,7 @@ class PdfReport:
         self.filename = filename
 
     def generate(self, flatmate1, flatmate2, bill):
-        pass
+
 
 
 the_bill = Bill(amount=120, period="March 2021")
