@@ -39,10 +39,14 @@ class PdfReport:
         # Insert Title
         pdf.set_font(family='Times', size=24, style='C')
         pdf.cell(w=0, h=80, txt="Roommate Bill", border=1, align="C", ln=1)
+
+
+        # Insert Period label and value
         pdf.cell(w=100, h=40, txt="Period:", border=1)
         pdf.cell(w=150, h=40, txt=bill.period, border=1, ln=1)
 
-        # Insert Period label and value
+        pdf.cell(w=100, h=40, txt="Period:", border=1)
+        pdf.cell(w=150, h=40, txt=bill.period, border=1, ln=1)
         pdf.output("bill.pdf")
         the_bill = Bill(amount=120, period="March 2021")
         john = Flatmate(name="John", days_in_the_house=20)
