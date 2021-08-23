@@ -1,3 +1,5 @@
+import webbrowser
+
 from fpdf import FPDF
 
 
@@ -39,6 +41,9 @@ class PdfReport:
         pdf = FPDF(orientation='P', unit='pt', format='A4')
         pdf.add_page()
 
+        # Add Icon
+        pdf.image(name="house.png", w=30, h=30)
+
         # Add the title
         pdf.set_font(family='Times', size=24, style='B')
         pdf.cell(w=0, h=80, txt="Roommate Bill", border=1, align="C", ln=1)
@@ -57,8 +62,16 @@ class PdfReport:
 
         pdf.output("bill.pdf")
 
+        webbrowser.open(self.filename)
 
-the_bill = Bill(amount=120, period="March 2021")
+
+amount = float(input("Hey user, enter the bill amount: "))
+print("This is a", amount)
+period = input("what is the bill period? E.g. December 2021")
+name1 = input("What is your name? ")
+days_in_house1 = input("how long was your stay? ")
+
+the_bill = Bill(amount=a, period="March 2021")
 john = Flatmate(name="john", days_in_house=20)
 mary = Flatmate(name="mary", days_in_house=25)
 
