@@ -18,3 +18,5 @@ print(f"{name2} pays: ", flatmate2.pay(the_bill, flatmate2))
 
 pdf_report = PdfReport(filename="Report1.pdf")
 pdf_report.generate(flatmate1, flatmate2, bill=the_bill)
+
+Test
